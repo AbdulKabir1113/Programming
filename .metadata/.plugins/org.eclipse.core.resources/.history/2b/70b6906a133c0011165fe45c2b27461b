@@ -1,0 +1,21 @@
+package numberprogram;
+
+import java.util.Scanner;
+
+public class _2SmallestDigit {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");		
+		int n = sc.nextInt();
+		
+		int small=0;
+		while(n>0) {
+			int rem = n%10;
+			if(small<rem)
+				small = rem;
+			n/=10;
+		}
+		System.out.println("Smallest Digit in Number is :" +small );
+	}
+}

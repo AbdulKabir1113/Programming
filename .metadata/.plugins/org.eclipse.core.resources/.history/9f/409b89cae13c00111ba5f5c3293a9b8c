@@ -1,0 +1,52 @@
+package numberprogram;
+
+import java.util.Scanner;
+
+public class _15TechNumber {
+	
+	public static int count(int n) {
+		int rem=0;
+		int count=0;
+		while(n>0) {
+			rem=n%10;
+			count++;
+			n/=10;
+		}
+		return count;
+	}
+	
+	public static int isTech(int n) {
+		int count = count(n);
+		int digit=count/2;
+		int rem=0;
+		int rev1=0;
+		int rev2=0;
+		int sum=0;
+		if(count%2==0) {
+			while(n>0) {
+				rem=n%10;
+				rev1=rev1*10+rem;
+				if(count/2==digit) {
+					rev2=rev2*10+rem;
+				}	
+				n/=10;
+			}
+			sum=rev1+rev2;
+			
+		}
+		return sum*sum;
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Number");
+		int n = sc.nextInt();
+		
+		System.out.println(isTech(n)==n
+				?"Tech Number"
+				:"not a Tech Number");
+		sc.close();
+		
+	}
+}

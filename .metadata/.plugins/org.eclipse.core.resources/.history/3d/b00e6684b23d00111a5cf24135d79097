@@ -1,0 +1,32 @@
+package patternprograms;
+
+import java.util.Scanner;
+
+public class _5 {
+
+public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of rows");
+		int row = sc.nextInt();
+		System.out.println("Enter number of columns");
+		int col = sc.nextInt();
+
+		        int n = 5;
+
+		        for (int i = 1; i <= n; i++) {
+		            for (int j = 1; j <= 2 * n - 1; j++) {
+
+		                if (i + j == n + 1 || j - i == n - 1 || i == n) {
+		                    System.out.print("* ");
+		                } else {
+		                    System.out.print("  ");
+		                }
+
+		            }
+		            System.out.println();
+		        }
+		
+		sc.close();
+	}
+}

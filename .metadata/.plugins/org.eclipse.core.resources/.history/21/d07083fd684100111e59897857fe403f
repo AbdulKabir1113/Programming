@@ -1,0 +1,33 @@
+package arrayprograms;
+
+public class _19UnionofTwoArrays {
+
+	public static void main(String[] args) {
+		int [] a = {1,2,3};
+		int [] b = {2,3,4};
+		
+		for(int i=0; i<a.length; i++) {
+			boolean flag = false;
+			for(int j=i+1; j<a.length; j++) {
+				if(a[i]!=a[j]) {
+					flag=true;
+				}
+			}
+			if(flag)
+				System.out.println(a[i]);
+			
+		}
+		
+		for(int i=0; i<b.length; i++) {
+			boolean flag = false;
+			for(int j=0; i<a.length; j++) {
+				if(b[i]==a[j])
+					flag=true;
+				    break;
+			}
+			if(!flag)
+				System.out.println(a[i]);
+			
+		}
+	}
+}

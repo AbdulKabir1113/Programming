@@ -1,0 +1,51 @@
+package numberprogram;
+
+import java.util.Scanner;
+
+public class _7AmstrongNumber {
+
+    // Count digits
+    public static int count(int n) {
+        int count = 0;
+        while (n > 0) {
+            count++;
+            n /= 10;
+        }
+        return count;
+    }
+
+    // Power function (digit^count)
+    public static int power(int base, int exp) {
+        int result = 1;
+        for (int i = 1; i <= exp; i++) {
+            result *= base;
+        }
+        return result;
+    }
+
+    // Armstrong logic
+    public static int armstrong(int n) {
+        int sum = 0;
+    
+        int digits = count(n);
+
+        while (n > 0) {
+            int rem = n % 10;
+            sum += power(rem, digits);
+            n /= 10;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int n = sc.nextInt();
+
+        System.out.println(armstrong(n) == n
+                ? "Armstrong Number"
+                : "Not an Armstrong Number");
+
+        sc.close();
+    }
+}

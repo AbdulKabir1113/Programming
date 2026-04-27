@@ -1,0 +1,36 @@
+package numberprogram;
+
+import java.util.Scanner;
+
+public class _6StrongNumber {
+
+	public static int fact(int n) {
+		int fact=1;
+		for(int i=1;i<=n; i++) {
+			fact=fact*i;
+		}
+		return fact;
+	}
+	
+	public static int digit(int n) {
+		int rem=0;
+		int sum=0;
+		while(n>0) {
+			rem=n%10;
+			sum=fact(rem);
+			n/=10;
+		}
+		return sum;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");		
+		int n = sc.nextInt();
+		
+		System.out.println(digit(n)==n
+				?"Strong Number"
+				:"not a Strong Number");
+		
+		sc.close();
+	}
+}

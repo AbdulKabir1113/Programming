@@ -1,0 +1,21 @@
+package arrayprograms;
+
+public class _20MaximumSubArray {
+
+	public static void main(String[] args) {
+		int [] a = {-2,1,-3,4,-1,2,1,-5,4};
+		
+		int sum=Integer.MIN_VALUE;
+		for(int i=0; i<a.length; i++) {
+			int max = a[0];
+			for(int j=i+1; j<a.length; j++) {
+				
+				sum+=a[j];
+				
+				if(sum>max) {
+					max=sum;
+				}
+			}
+		}
+	}
+}
