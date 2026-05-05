@@ -1,0 +1,13 @@
+package stringprograms;
+
+public class _01ReverseaString {
+
+	public static void main(String[] args) {
+		String s =  "TCSNQT";
+		String rev ="";
+		for(int i=s.length(); i>0; i--) {
+			rev+=s.charAt(i);
+		}
+		System.out.println(rev);
+	}
+}

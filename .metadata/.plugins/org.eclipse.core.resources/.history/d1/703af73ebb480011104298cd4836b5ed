@@ -1,0 +1,10 @@
+package stringprograms;
+
+public class _05ConvertLowercasetoUppercase {
+
+	public static void main(String[] args) {
+		String s = "hello world";
+		s = s.toUpperCase();
+		System.out.println(s);
+	}
+}
