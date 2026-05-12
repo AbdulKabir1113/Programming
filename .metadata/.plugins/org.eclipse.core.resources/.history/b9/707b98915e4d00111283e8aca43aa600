@@ -1,0 +1,25 @@
+package stringprograms;
+
+public class _31CaesarCipher {
+
+	public static void main(String[] args) {
+		String s = "TCS 2026";
+		int shift = 5;
+		StringBuilder res = new StringBuilder();
+		
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			
+			if(ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
+				if(ch == 'z') 
+					res.append((char) (ch - 26));
+				else if (ch == 'Z') 
+					res.append((char) (ch - 26));
+				else
+					res.append((char) (ch + shift));
+				
+			}
+		}
+		System.out.println(res);
+	}
+}

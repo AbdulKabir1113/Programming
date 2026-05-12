@@ -1,0 +1,32 @@
+package stringprograms;
+
+public class _24StringCompression {
+
+	public static void main(String[] args) {
+		String s = "aaabbc";
+		StringBuilder res = new StringBuilder();
+		
+		for(int i=0; i<s.length(); i++) {
+			int count = 1;
+			char ch = s.charAt(i);
+			
+			for(int j=i+1; j<s.length(); j++) {
+				
+				if(ch == s.charAt(j)) {
+					count++;
+				}else {
+					break;
+				}
+				i = j;
+			}
+			
+			res.append(ch);
+			res.append(count);
+		}
+		// After compression
+		if(res.length() >= s.length())
+		    System.out.println(s);      // ✅ Original is shorter or equal
+		else
+		    System.out.println(res);    // ✅ Compressed is shorter
+	}
+}

@@ -1,0 +1,18 @@
+package stringprograms;
+
+public class _12FirstNonRepeatingCharacter {
+
+	public static void main(String[] args) {
+		String s = "programming";
+		
+		for(int i=0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			for(int j=i+1; j<s.length(); j++) {
+				if(s.charAt(j)==c)
+					break;
+				else
+					System.out.println(c);
+			}
+		}
+	}
+}

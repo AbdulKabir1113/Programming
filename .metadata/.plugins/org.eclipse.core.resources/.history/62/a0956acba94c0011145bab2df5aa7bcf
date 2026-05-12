@@ -1,0 +1,11 @@
+package stringprograms;
+
+public class _30FindIndexofCharacter {
+
+	public static void main(String[] args) {
+		String s = "programming";
+	    char c = 'g';
+	    
+	    s.indexOf(c);
+	}
+}

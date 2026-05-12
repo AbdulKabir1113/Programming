@@ -1,0 +1,19 @@
+package stringprograms;
+
+public class _29RemoveVowelsfromString {
+
+	public static void main(String[] args) {
+		String s = "Hello World";
+		StringBuilder res = new StringBuilder();
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			
+			if(ch != 'A' || ch != 'E' || ch != 'I' || ch != 'O' || ch != 'U' ||
+			   ch != 'a' || ch != 'e' || ch != 'i' || ch != 'o' || ch != 'u') {
+				res.append(ch);
+			}
+				
+		}
+		System.out.println(res);
+	}
+}

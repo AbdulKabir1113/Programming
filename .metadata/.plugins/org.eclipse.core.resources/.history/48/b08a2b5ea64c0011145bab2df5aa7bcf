@@ -1,0 +1,23 @@
+package stringprograms;
+
+public class _26LongestSubstringWithoutRepeatingCharacters {
+
+	public static void main(String[] args) {
+		String s = "abcabcbb";
+		int fCount = 0;
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			int count = 0;
+			for(int j=i+1; j<s.length(); j++) {
+				if(ch != s.charAt(j)) {
+					count++;
+				}
+				
+				if(fCount < count) {
+					fCount = count;
+				}
+			}
+		}
+		System.out.println(fCount);
+	}
+}
