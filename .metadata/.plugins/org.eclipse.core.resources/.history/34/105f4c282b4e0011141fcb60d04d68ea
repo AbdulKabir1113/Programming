@@ -1,0 +1,14 @@
+package stringprograms;
+
+public class _36LongestCommonPrefix {
+
+	public static void main(String[] args) {
+		String [] str= {"java", "javac", "javascript"};
+		
+		String comp = str[0];
+		System.out.println(comp);
+		for(int i=0; i<str.length; i++) {
+			
+		}
+	}
+}

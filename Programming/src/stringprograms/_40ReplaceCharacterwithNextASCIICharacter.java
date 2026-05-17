@@ -1,0 +1,26 @@
+package stringprograms;
+
+public class _40ReplaceCharacterwithNextASCIICharacter {
+
+	public static void main(String[] args) {
+		String s = "xyz Z";
+		StringBuilder res = new StringBuilder();
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			if(ch >= '0' && ch<='9')
+				res.append(ch);
+			else if(ch >= 'a' && ch <= 'y')
+				res.append((char) (ch+1));
+			else if(ch == 'z')
+				res.append('A');
+			else if(ch >= 'A' && ch <= 'Y')
+				res.append((char) (ch+1));
+			else if(ch == 'Z')
+				res.append('a');
+			else
+				res.append(ch);
+			
+		}
+		System.out.println(res);
+	}
+}
